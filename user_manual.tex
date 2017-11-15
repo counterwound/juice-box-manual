@@ -1,19 +1,35 @@
-\documentclass[12pt]{article}
+\documentclass[letterpaper]{report}
 
-\usepackage{fullpage}
+\usepackage[letterpaper]{geometry}
 \usepackage{graphicx}
+\usepackage{titling}
+
+\graphicspath{{./images/}}
+
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
 
 \begin{document}
-
-
-\title{Juice Box User Manual}
+\title{Juice Box User Manual\\User Guide}
 \author{Sevun Scientific, Inc.}
 \date{\today}
-\maketitle
+\begin{titlingpage} %This starts the title page
+	\centering
+	\includegraphics[width=5in]{ssi_logo.png}
+	\vspace{2cm} %You can control the vertical distance
+\begin{flushleft}
+	\begin{Huge}
+		\textbf{Juice Box User Manual}\\
+		\vspace{5mm}
+		Sevun Scientific., Inc.
+	\end{Huge}
+\end{flushleft}
 
+\vfill
+\Large \thedate \par
 
-\newpage
-{\Large Important Safety Instructions \par}
+\end{titlingpage} 
+
 \newpage
 \tableofcontents
 
