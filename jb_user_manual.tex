@@ -1,0 +1,49 @@
+\documentclass[letterpaper]{article}
+
+\usepackage[letterpaper]{geometry}
+\usepackage{graphicx}
+\usepackage{titling}
+\usepackage{subfiles}
+
+\graphicspath{{images/}{../images/}} % loads images from images folder
+
+
+\begin{document}
+
+\date{\today}
+\begin{titlingpage} % title page
+	\centering
+	\includegraphics[width=5in]{ssi_logo.png}
+	\vspace{2cm}
+\begin{flushleft}
+	\begin{Huge}
+		\textbf{Juice Box User Manual}\\
+		\vspace{5mm}
+		Sevun Scientific., Inc.
+	\end{Huge}
+\end{flushleft}
+\vfill
+\Large \thedate \par
+\end{titlingpage} 
+
+\pagenumbering{gobble} %This removes page numbers
+\newpage
+\tableofcontents
+
+\newpage
+\pagenumbering{arabic} %Begins page numbering
+\setcounter{page}{1}
+
+\section{Introduction}
+\subfile{sections/jb_introduction}
+ 
+\section{Operation}
+\subfile{sections/jb_operation}
+
+\section{Maintenance and Trouble Shooting}
+\subfile{sections/jb_maintenance}
+
+\section{Appendix}
+\subfile{sections/jb_appendix}
+
+\end{document}
