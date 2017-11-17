@@ -1,30 +1,75 @@
-\documentclass[letterpaper]{article}
+\documentclass[10pt]{article}
 
-\usepackage[letterpaper]{geometry}
-\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{graphicx}% needed to load graphics
 \usepackage{titling}
-\usepackage{subfiles}
+\usepackage{subfiles} % needed for section organization
+\usepackage{wrapfig}
+\usepackage{blindtext}
 
+\geometry{letterpaper, portrait, margin=1in}
 \graphicspath{{images/}{../images/}} % loads images from images folder
 
-
+\linespread{1.2}
 \begin{document}
 
-\date{\today}
+\date{\today} % updates date to current date
 \begin{titlingpage} % title page
-	\centering
+	\centering % center justified
 	\includegraphics[width=5in]{ssi_logo.png}
 	\vspace{2cm}
-\begin{flushleft}
+\begin{flushleft} % left justified
 	\begin{Huge}
 		\textbf{Juice Box User Manual}\\
 		\vspace{5mm}
-		Sevun Scientific., Inc.
+		Counterwound Labs, Inc.
 	\end{Huge}
 \end{flushleft}
 \vfill
-\Large \thedate \par
+{\Large \thedate \par}
 \end{titlingpage} 
+
+\begin{flushleft}
+	{\huge \textbf{Important Safety Instructions} \par}
+	\vspace{1cm}
+
+	\leftskip=3cm
+	\begin{large} 
+		Then did he raise on high the Holy Hand Grenade of Antioch, saying, 
+		"Bless this, O Lord, that with it thou mayst blow thine enemies to tiny 
+		bits, in thy mercy." And the people did rejoice and did feast upon the 
+		lambs and toads and tree-sloths and fruit-bats and orangutans and 
+		breakfast cereals ... Now did the Lord say, "First thou pullest the Holy 
+		Pin. Then thou must count to three. Three shall be the number of the 
+		counting and the number of the counting shall be three. Four shalt 
+		thou not count, neither shalt thou count two, excepting that thou then 
+		proceedeth to three. Five is right out. Once the number three, being the 
+		number of the counting, be reached, then lobbest thou the Holy Hand 
+		Grenade in the direction of thine foe, who, being naughty in my sight, 
+		shall snuff it."
+	\end{large}
+	%\leftskip=0cm
+\end{flushleft}
+
+\hrule
+
+\begin{wrapfigure}{l}{1in}
+    \centering
+    \includegraphics[width=1in]{warning_y}
+\end{wrapfigure}
+
+\vspace{5mm}
+
+\noindent   
+\Large{\textbf{WARNING WARNING WARNING:}} \\
+\begin{large}                                        
+	Big long paragraph about how our product is dangerous and you 
+	really shouldn't do this or that unless you seriously want to be electrecuted. 
+	This is a bunch of car batteries and even one car battery would hurt you. In 
+	the movies they use car batteries to torture people so why on earth would 
+	you think about touching the prong thingies, you will die.
+\end{large}
+
 
 \pagenumbering{gobble} %This removes page numbers
 \newpage
@@ -34,15 +79,19 @@
 \pagenumbering{arabic} %Begins page numbering
 \setcounter{page}{1}
 
+\newpage
 \section{Introduction}
 \subfile{sections/jb_introduction}
  
+\newpage
 \section{Operation}
 \subfile{sections/jb_operation}
 
+\newpage
 \section{Maintenance and Trouble Shooting}
 \subfile{sections/jb_maintenance}
 
+\newpage
 \section{Appendix}
 \subfile{sections/jb_appendix}
 
