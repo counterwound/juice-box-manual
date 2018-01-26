@@ -1,24 +1,26 @@
 \documentclass[10pt]{article}
 
 \usepackage{geometry}
-\usepackage{graphicx} % needed to load graphics
-\usepackage{titling}      % needed for images on title page
-\usepackage{subfiles}   % needed for section organization
-\usepackage{wrapfig}   % useful in picture formatting
-\usepackage{blindtext} % creates paragraph of dummy text
+\usepackage{graphicx} 					% needed to load graphics
+\usepackage{titling}     					% needed for images on title page
+\usepackage{subfiles}   					% needed for section organization
+\usepackage{wrapfig} 					% useful in picture formatting
+\usepackage{blindtext} 					% creates paragraph of dummy text
 
 \geometry{letterpaper, portrait, margin=1in}
-\graphicspath{{images/}{../images/}} % loads images from images folder
+\graphicspath{{images/}{../images/}} 			% loads images from images folder
 
-\linespread{1.2}
+\linespread{1.2}							% 1.2 spacing
+
 \begin{document}
 
-\date{\today} % updates date to current date
-\begin{titlingpage} % title page
-	\centering % center justified
+
+\date{\today} 							% updates date to current date
+\begin{titlingpage} 						% title page
+	\centering 							% center justified
 	\includegraphics[width=5in]{ssi_logo.png}
-	\vspace{2cm}
-\begin{center} % centered
+	\vspace{2cm}						% added vertical spacing
+\begin{center}							% centered
 	\begin{Huge}
 		\textbf{JuiceBox User Manual}\\ 
 		\vspace{5mm}
@@ -26,15 +28,16 @@
 	\end{Huge}
 \end{center}
 \vfill
-{\Large \thedate \par} %date updates every time doc is modified
+{\Large \thedate \par} 					% date updates every time doc is modified
 \end{titlingpage} 
 
 %%%%%%% All text in this document needs to be re-read and numbers updated %%%%%%%
+\pagenumbering{roman} 					% i, ii, iii numbering scheme
 \begin{flushleft}
 	{\huge \textbf{Important Safety Instructions} \par}
 	\vspace{1cm}
 
-	\leftskip=3cm %indents the paragraph
+	\leftskip=3cm 						% indents the paragraph
 	\begin{large} 		
 		Misuse of the JuiceBox may result in danger to the user. We urge you to
 		pay special attention to all CAUTION and WARNING statements.
@@ -43,7 +46,7 @@
 		identify conditions that may result in personal injury or loss of life.\\
 		\vspace{3mm}
 		This section contains important safety and operating instructions. Read
-		and keep this Owner’s Guide for future reference.\\
+		and keep this User Manual for future reference.\\
 		\vspace{3mm}
 		Before using the JuiceBox, read all instructions and
 		cautionary markings on the JuiceBox and all appropriate sections of
@@ -51,112 +54,118 @@
 	\end{large}
 \end{flushleft}
 
-\hrule % horizontal line
-% repeat this chunk for every new warning/caution
-\begin{wrapfigure}{l}{1in} %creates 1 inch buffer
-    \centering
-    \includegraphics[width=.75in]{warning_y} %Can use warning_r for alternate red warning image
+\hrule 								% horizontal line
+
+\begin{wrapfigure}{l}{1in} 					% creates 1 inch buffer
+    \includegraphics[width=.75in]{warning_y} 	% can use warning_r for alternate red warning image
 \end{wrapfigure}
 
 \vspace{5mm}
-
-\noindent   
-\Large{\textbf{WARNING: Shock or fire hazard}} \\
+\noindent   							% prevents paragraph indentation
+\Large{\textbf{WARNING: Shock or Fire Hazard}} \\
 \begin{large}                                        
 	\begin{itemize}
-		\item{ The JuiceBox generates the same potentially lethal AC power as a normal
+		\item{The JuiceBox generates the same potentially lethal AC power as a normal
 			household wall outlet. Treat it with the same respect that you would any AC	
 			outlet.}
 		\item{Do not insert any foreign objects into the JuiceBox's outlets, or the ventilation holes. 
-			Do not expose the Juicebox to water.}	
+			 Do not expose the Juicebox to water.}	
 		\item{Do not, under any circumstances, connect the JuiceBox's output power outlet into the charging power outlet.}
 		\item{Failure to follow the above safety instructions may result in personal injury
-			and/or damage to JuiceBox.}
+			and/or damage to the JuiceBox.}
 	\end{itemize}
 \end{large}
+\hrule
 
 \begin{wrapfigure}{l}{1in}
-    \centering
     \includegraphics[width=.75in]{warning_y}
 \end{wrapfigure}
 
 \vspace{5mm}
-
 \noindent   
-\Large{\textbf{WARNING: Shock or fire hazard}} \\
-\begin{large}                                
+\Large{\textbf{WARNING: Shock or Fire Hazard}} \\
+\begin{large}                   
 	\begin{itemize}
-		\item{ \leftskip=3cm Do not use the JuiceBox where there are flammable fumes or gases, such as
-			in the bilge of a gasoline powered boat, or near propane tanks.}	
+		\item{Do not use the JuiceBox where there are flammable fumes or gases, such as
+			 in the bilge of a gasoline powered boat, or near propane tanks.}	
 		\item{Do not, under any circumstances, connect the JuiceBox's output power outlet into the charging power outlet.}
 		\item{When working on electrical equipment always ensure someone is nearby to
-			help you in an emergency.}
+			 help you in case of an emergency.}
 	\end{itemize}
 \end{large}
+\hrule
 
+\newpage
+ %%%%%%% wrapping issues fixed by adding text at head of next page %%%%%%%%
+\begin{flushleft} {\huge \textbf{Important Safety Instructions Continued} \par}
+\end{flushleft}
+\hrule
 
 \begin{wrapfigure}{l}{1in}
-    \centering
-    \includegraphics[width=.75in]{warning_y}
+    \includegraphics[width=0.75in]{warning_y}
 \end{wrapfigure}
 
 \vspace{5mm}
-
 \noindent
 \Large{\textbf{WARNING: Heat hazard}} \\
 \begin{large}                                        
 	\begin{itemize}
+<<<<<<< HEAD
 		%\leftskip=3cm
 		\item{ The Juicebox's internal inverter components may become uncomfortably warm,
 			reaching 140°F (60°C) under extended high power operation.}
 		\item{Ensure at least 15 cm (6 in) of air space is maintained on all sides and on top of the JuiceBox.}
 		\item{During operation, keep away from materials that may be affected by high
+=======
+		\item{ \leftskip=3cm The JuiceBox's internal inverter components may become uncomfortably warm,
+			reaching 140F (60C) under extended high power operation}. 
+		\item{Ensure at least 6 in (15 cm) of air space is maintained on all sides and on top of the JuiceBox.
+			During operation, keep away from materials that may be affected by high
+>>>>>>> f3c49bcf0b990b01bcfb3bbac73914edf0476049
 			temperatures such as blankets, pillows and sleeping bags.}
 	\end{itemize}
 \end{large}
-
+\hrule
 
 \begin{wrapfigure}{l}{1in}
-    \centering
     \includegraphics[width=.75in]{warning_y}
 \end{wrapfigure}
 
 \vspace{5mm}
-
 \noindent   
 \Large{\textbf{CAUTION}} \\
 \begin{large}                                        
 	\begin{itemize}
-		\item{Do not connect any AC load whose neutral conductor is connected to ground,
-			to the JuiceBox}
-		\item{Do not expose the JuiceBox to temperatures in excess of 104°F (40°C).}
+		\item{Do not connect to the JuiceBox any AC load with a neutral conductor connected to ground.}
+		\item{Do not expose the JuiceBox to temperatures in excess of 104F (40C).}
 	\end{itemize}
 \end{large}
+\hrule
 
-\pagenumbering{gobble} % This removes page numbers
+
 \newpage
 \tableofcontents
 
 \newpage
-\pagenumbering{arabic} % Begins page numbering
-\setcounter{page}{1} % Resets page number to 1
+\pagenumbering{arabic} 					% Begins page numbering
+\setcounter{page}{1} 					% Resets page number to 1
 
 %%%%%%% Edit each subsection through their own subfile %%%%%%%
 \newpage
-\section{Introduction}
+\section{\huge{Introduction}}
 \subfile{sections/jb_introduction}
  
 \newpage
-\section{Operation}
+\section{\huge{Operation}}
 \subfile{sections/jb_operation}
 
 \newpage
-\section{Maintenance and Trouble Shooting}
+\section{\huge{Maintenance and Trouble Shooting}}
 \subfile{sections/jb_maintenance}
 
 
 \newpage
-\section{Appendix}
+\section{\huge{Appendix}}
 \subfile{sections/jb_appendix}
 
 
